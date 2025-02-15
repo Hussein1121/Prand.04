@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الأحذية - المنتجات</title>
+    <link rel="stylesheet" href="style/stylee.css">
+</head>
+<body>
+    <header>
+        <h1>متجر الأحذية</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="cart.html">عربة التسوق (<span id="cart-count">0</span>)</a></li>
+                <li><a href="login.html" id="login-link">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="all-products">
+            <h2>جميع المنتجات</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="shoe1.jpg" alt="حذاء 1">
+                    <h3>حذاء رياضي</h3>
+                    <p>50$</p>
+                    <button onclick="addToCart('حذاء رياضي', 50)">أضف إلى السلة</button>
+                </div>
+                <div class="product">
+                    <img src="shoe2.jpg" alt="حذاء 2">
+                    <h3>حذاء كلاسيكي</h3>
+                    <p>70$</p>
+                    <button onclick="addToCart('حذاء كلاسيكي', 70)">أضف إلى السلة</button>
+                </div>
+                <div class="product">
+                    <img src="shoe3.jpg" alt="حذاء 3">
+                    <h3>حذاء نسائي</h3>
+                    <p>60$</p>
+                    <button onclick="addToCart('حذاء نسائي', 60)">أضف إلى السلة</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PRAND04. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

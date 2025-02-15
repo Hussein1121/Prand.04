@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAND.04 - عربة التسوق</title>
+    <link rel="stylesheet" href="style/stylee.css">
+</head>
+<body>
+    <header>
+        <h1>PRAND.04</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="cart.html">عربة التسوق (<span id="cart-count">0</span>)</a></li>
+                <li><a href="login.html" id="login-link">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>عربة التسوق</h2>
+            <div id="cart-items">
+                <!-- يتم إضافة العناصر هنا عبر JavaScript -->
+            </div>
+            <p>المجموع: <span id="cart-total">0</span>$</p>
+            <button onclick="checkout()">إتمام الشراء</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PRAND04. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
