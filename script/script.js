@@ -1,5 +1,3 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 // بيانات المستخدمين (يمكن استبدالها بقاعدة بيانات حقيقية)
 const users = [
     { username: "user1", password: "pass1" },
