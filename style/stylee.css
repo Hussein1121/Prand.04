@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 .btn {
-    background-color: #ff6600;
+    background-color: #800505;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -108,7 +108,7 @@ nav ul li a {
 }
 
 .contact-form button {
-    background-color: #ff6600;
+    background-color: #800505;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -118,7 +118,7 @@ nav ul li a {
 }
 
 .contact-form button:hover {
-    background-color: #e65c00;
+    background-color: #800505;
 }
 
 #contact-message {
@@ -180,7 +180,7 @@ nav ul li a {
 }
 
 .login-form button {
-    background-color: #ff6600;
+    background-color: #800505;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -189,7 +189,7 @@ nav ul li a {
 }
 /* تنسيقات عامة للأزرار */
 button, .btn {
-    background: linear-gradient(45deg, #ff6600, #e65c00);
+    background: linear-gradient(45deg, #800505, black);
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -204,7 +204,7 @@ button, .btn {
 
 /* تأثير التحويم (Hover) */
 button:hover, .btn:hover {
-    background: linear-gradient(45deg, #e65c00, #ff6600);
+    background: linear-gradient(45deg, #800505, white);
     transform: translateY(-2px); /* تحريك الزر لأعلى قليلاً */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* زيادة الظل */
 }
@@ -246,6 +246,38 @@ button:active, .btn:active {
 }
 
 .cart-item button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* تنسيقات عامة */
+.social-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.social-login img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.social-login:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-login:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

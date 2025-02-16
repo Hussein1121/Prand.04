@@ -1,3 +1,5 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 // بيانات المستخدمين (يمكن استبدالها بقاعدة بيانات حقيقية)
 const users = [
     { username: "user1", password: "pass1" },
@@ -145,6 +147,60 @@ document.getElementById("contactForm")?.addEventListener("submit", function (eve
 // عرض رسائل التأكيد أو الأخطاء
 function showMessage(message, type) {
     const messageElement = document.getElementById("contact-message");
+    if (messageElement) {
+        messageElement.textContent = message;
+        messageElement.className = type; // إضافة كلاس لتنسيق الرسالة
+    }
+}
+// تهيئة Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyA03Wx-RxwM2Vt3ODAAnfo6nPb3p-rpJ1I",
+    authDomain: "prand-e072b.firebaseapp.com",
+    projectId: "prand-e072b",
+    storageBucket: "prand-e072b.firebasestorage.app",
+    messagingSenderId: "670663572231",
+    appId: "1:670663572231:web:4ff23b4cfd0b96455663a2"
+};
+
+// Initialize Firebase
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// تسجيل الدخول باستخدام البريد الإلكتروني وكلمة المرور
+document.getElementById("emailLoginForm")?.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            showMessage("تم تسجيل الدخول بنجاح!", "success");
+            window.location.href = "index.html"; // توجيه المستخدم إلى الصفحة الرئيسية
+        })
+        .catch((error) => {
+            showMessage("خطأ في تسجيل الدخول: " + error.message, "error");
+        });
+});
+
+// تسجيل الدخول باستخدام Google
+document.getElementById("googleLoginBtn")?.addEventListener("click", function () {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider)
+        .then((result) => {
+            const user = result.user;
+            showMessage("تم تسجيل الدخول باستخدام Google بنجاح!", "success");
+            window.location.href = "index.html"; // توجيه المستخدم إلى الصفحة الرئيسية
+        })
+        .catch((error) => {
+            showMessage("خطأ في تسجيل الدخول باستخدام Google: " + error.message, "error");
+        });
+});
+
+// عرض رسائل التأكيد أو الأخطاء
+function showMessage(message, type) {
+    const messageElement = document.getElementById("login-message");
     if (messageElement) {
         messageElement.textContent = message;
         messageElement.className = type; // إضافة كلاس لتنسيق الرسالة
